@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAAC", "DAAC.csproj", "{912487F7-F646-4690-852B-F148E8F1C12F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioReceiver", "AudioReceiver\AudioReceiver.csproj", "{AF1F3CD7-BB46-4502-8B47-DE39FF0501E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{912487F7-F646-4690-852B-F148E8F1C12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912487F7-F646-4690-852B-F148E8F1C12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912487F7-F646-4690-852B-F148E8F1C12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912487F7-F646-4690-852B-F148E8F1C12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1F3CD7-BB46-4502-8B47-DE39FF0501E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1F3CD7-BB46-4502-8B47-DE39FF0501E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1F3CD7-BB46-4502-8B47-DE39FF0501E0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AF1F3CD7-BB46-4502-8B47-DE39FF0501E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1F3CD7-BB46-4502-8B47-DE39FF0501E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1F3CD7-BB46-4502-8B47-DE39FF0501E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA880CB0-E764-4784-BD55-ADEBD2F8ECF8}
+	EndGlobalSection
+EndGlobal
