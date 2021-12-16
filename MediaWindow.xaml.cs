@@ -37,6 +37,14 @@ namespace DAAC
             Player.MediaPlayer.Play();
         }
 
+        /// <summary>
+        /// Sends audio over TCP in PCM format.
+        /// Data is divided into 4 bytes before sending.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="samples"></param>
+        /// <param name="count"></param>
+        /// <param name="pts"></param>
         void PlayAudio(IntPtr data, IntPtr samples, uint count, long pts)
         {
             int bytes = (int)count * 4; // (16 bit, 2 channels)
@@ -67,6 +75,10 @@ namespace DAAC
             }
         }
 
+        /// <summary>
+        /// Drains all unsent audio.
+        /// </summary>
+        /// <param name="data"></param>
         void DrainAudio(IntPtr data)
         {
             for (int i = 0; i < StreamerServer.Instance.endPoints.Count; i++)
@@ -86,6 +98,11 @@ namespace DAAC
             }
         }
 
+        /// <summary>
+        /// Flushes previous audio if stream has data available.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="pts"></param>
         void FlushAudio(IntPtr data, long pts)
         {
             for (int i = 0; i < StreamerServer.Instance.endPoints.Count; i++)
@@ -110,6 +127,11 @@ namespace DAAC
 
         }
 
+        /// <summary>
+        /// Flushes audio in stream if media is paused.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="pts"></param>
         void PauseAudio(IntPtr data, long pts)
         {
             for (int i = 0; i < StreamerServer.Instance.endPoints.Count; i++)
@@ -134,6 +156,14 @@ namespace DAAC
             
         }
 
+        /// <summary>
+        /// Sets the bitrate and channel of the audio.
+        /// </summary>
+        /// <param name="opaque"></param>
+        /// <param name="format"></param>
+        /// <param name="rate"></param>
+        /// <param name="channels"></param>
+        /// <returns></returns>
         int AudioSetup(ref IntPtr opaque, ref IntPtr format, ref uint rate, ref uint channels)
         {
             rate = 24000;

@@ -16,11 +16,19 @@ namespace DAAC
         bool loop = true;
         Thread thread;
 
+        /// <summary>
+        /// Sets the dispatcher object to StreamerServer.
+        /// </summary>
+        /// <param name="dispatch"></param>
         public void setDispatcher(Dispatcher dispatch)
         {
             dispatcher = dispatch;
         }
 
+        /// <summary>
+        /// Starts TCP Listener Enabling upto 10 Clients
+        /// to be connected.
+        /// </summary>
         public void StartServer()
         {
             loop = true;
@@ -29,6 +37,10 @@ namespace DAAC
             thread = new Thread(BackThread);
             thread.Start();
         }
+
+        /// <summary>
+        /// Disconnects all the clients and stops TCP Server.
+        /// </summary>
         public void StopServer()
         {
             loop = false;
@@ -51,6 +63,9 @@ namespace DAAC
             }
         }
 
+        /// <summary>
+        /// Sets a new cilent to Endpoint when a client connects to server.
+        /// </summary>
         void BackThread()
         {
             while (loop)

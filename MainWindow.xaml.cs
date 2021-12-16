@@ -15,6 +15,9 @@ namespace DAAC
     {
         MediaWindow mediaWindow;
 
+        /// <summary>
+        /// Initialization of MainWindow
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
