@@ -32,7 +32,7 @@ namespace DAAC
             Media media = new Media(libVLC, new Uri(mediaLocation));
             Player.MediaPlayer = new MediaPlayer(media);
             Player.MediaPlayer.SetAudioFormatCallback(AudioSetup, AudioCleanup);
-            Player.MediaPlayer.SetAudioCallbacks(PlayAudio, PauseAudio, ResumeAudio, FlushAudio, DrainAudio);
+            Player.MediaPlayer.SetAudioCallbacks(PlayAudio, PauseAudio, ResumeAudio, FlushAudio, DrainAudio);  //Playes audio stream to the clients over TCP.
             Player.MediaPlayer.EnableHardwareDecoding = true;
             Player.MediaPlayer.Play();
         }
